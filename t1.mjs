@@ -48,7 +48,11 @@ server.listen(0, '127.0.0.1', async () => {
 
 	const s2 = await dynamic_import(`
 		import { hello } from './t1-b.mjs';
+		console.log("Before second greet, let's check out top level await - sleep 1 sec");
+
+		await new Promise(resolve => setTimeout(resolve, 1000));
 		console.log('Secondly we will greet:', hello);
+
 	`);
 
 	server_socket.write('shutdown\n');
