@@ -64,6 +64,7 @@ server.listen(0, '127.0.0.1', async () => {
 
 Loaded module t1-b.mjs
 First we will greet: world
+Before second greet, let's check out top level await - sleep 1 sec
 Secondly we will greet: world
 Shutdown loader
 
